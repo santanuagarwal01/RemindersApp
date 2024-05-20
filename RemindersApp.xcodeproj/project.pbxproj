@@ -7,22 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF3CA1C82BF4A440005440A5 /* RemindersAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA1C72BF4A440005440A5 /* RemindersAppApp.swift */; };
-		AF3CA1CA2BF4A440005440A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA1C92BF4A440005440A5 /* ContentView.swift */; };
+		AF3CA1C82BF4A440005440A5 /* RemindersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA1C72BF4A440005440A5 /* RemindersApp.swift */; };
+		AF3CA1CA2BF4A440005440A5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA1C92BF4A440005440A5 /* HomeView.swift */; };
 		AF3CA1CC2BF4A441005440A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF3CA1CB2BF4A441005440A5 /* Assets.xcassets */; };
 		AF3CA1CF2BF4A441005440A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF3CA1CE2BF4A441005440A5 /* Preview Assets.xcassets */; };
-		AF3CA1D12BF4A441005440A5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA1D02BF4A441005440A5 /* Persistence.swift */; };
-		AF3CA1D42BF4A441005440A5 /* RemindersApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA1D22BF4A441005440A5 /* RemindersApp.xcdatamodeld */; };
+		AF3CA1D12BF4A441005440A5 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA1D02BF4A441005440A5 /* CoreDataProvider.swift */; };
+		AF3CA1DC2BF8840B005440A5 /* RemindersModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA1DA2BF8840B005440A5 /* RemindersModel.xcdatamodeld */; };
+		AF3CA1E02BF8EBD5005440A5 /* MyList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA1DF2BF8EBD5005440A5 /* MyList+CoreDataClass.swift */; };
+		AF3CA1E22BF8EBE8005440A5 /* MyList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA1E12BF8EBE8005440A5 /* MyList+CoreDataProperties.swift */; };
+		AF3CA1E52BF8EE20005440A5 /* AddNewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA1E42BF8EE20005440A5 /* AddNewListView.swift */; };
+		AF3CA1E72BF8EF31005440A5 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA1E62BF8EF31005440A5 /* ColorPickerView.swift */; };
+		AF3CA1EA2BFB9CDF005440A5 /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA1E92BFB9CDF005440A5 /* ReminderService.swift */; };
+		AF3CA1ED2BFB9E8F005440A5 /* UIColorTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA1EC2BFB9E8F005440A5 /* UIColorTransformer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AF3CA1C42BF4A440005440A5 /* RemindersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF3CA1C72BF4A440005440A5 /* RemindersAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersAppApp.swift; sourceTree = "<group>"; };
-		AF3CA1C92BF4A440005440A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AF3CA1C72BF4A440005440A5 /* RemindersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersApp.swift; sourceTree = "<group>"; };
+		AF3CA1C92BF4A440005440A5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AF3CA1CB2BF4A441005440A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF3CA1CE2BF4A441005440A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AF3CA1D02BF4A441005440A5 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		AF3CA1D32BF4A441005440A5 /* RemindersApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemindersApp.xcdatamodel; sourceTree = "<group>"; };
+		AF3CA1D02BF4A441005440A5 /* CoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
+		AF3CA1DB2BF8840B005440A5 /* RemindersModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemindersModel.xcdatamodel; sourceTree = "<group>"; };
+		AF3CA1DF2BF8EBD5005440A5 /* MyList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AF3CA1E12BF8EBE8005440A5 /* MyList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AF3CA1E42BF8EE20005440A5 /* AddNewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewListView.swift; sourceTree = "<group>"; };
+		AF3CA1E62BF8EF31005440A5 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
+		AF3CA1E92BFB9CDF005440A5 /* ReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
+		AF3CA1EC2BFB9E8F005440A5 /* UIColorTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTransformer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +67,14 @@
 		AF3CA1C62BF4A440005440A5 /* RemindersApp */ = {
 			isa = PBXGroup;
 			children = (
-				AF3CA1C72BF4A440005440A5 /* RemindersAppApp.swift */,
-				AF3CA1C92BF4A440005440A5 /* ContentView.swift */,
+				AF3CA1EB2BFB9E7F005440A5 /* Transformers */,
+				AF3CA1E82BFB9CCE005440A5 /* Services */,
+				AF3CA1E32BF8EE15005440A5 /* Views */,
+				AF3CA1DE2BF8EBC3005440A5 /* Models */,
+				AF3CA1DD2BF8845B005440A5 /* Providers */,
+				AF3CA1C72BF4A440005440A5 /* RemindersApp.swift */,
 				AF3CA1CB2BF4A441005440A5 /* Assets.xcassets */,
-				AF3CA1D02BF4A441005440A5 /* Persistence.swift */,
-				AF3CA1D22BF4A441005440A5 /* RemindersApp.xcdatamodeld */,
+				AF3CA1DA2BF8840B005440A5 /* RemindersModel.xcdatamodeld */,
 				AF3CA1CD2BF4A441005440A5 /* Preview Content */,
 			);
 			path = RemindersApp;
@@ -71,6 +86,49 @@
 				AF3CA1CE2BF4A441005440A5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AF3CA1DD2BF8845B005440A5 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				AF3CA1D02BF4A441005440A5 /* CoreDataProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		AF3CA1DE2BF8EBC3005440A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF3CA1DF2BF8EBD5005440A5 /* MyList+CoreDataClass.swift */,
+				AF3CA1E12BF8EBE8005440A5 /* MyList+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF3CA1E32BF8EE15005440A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF3CA1C92BF4A440005440A5 /* HomeView.swift */,
+				AF3CA1E42BF8EE20005440A5 /* AddNewListView.swift */,
+				AF3CA1E62BF8EF31005440A5 /* ColorPickerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AF3CA1E82BFB9CCE005440A5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AF3CA1E92BFB9CDF005440A5 /* ReminderService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AF3CA1EB2BFB9E7F005440A5 /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				AF3CA1EC2BFB9E8F005440A5 /* UIColorTransformer.swift */,
+			);
+			path = Transformers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +201,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF3CA1D12BF4A441005440A5 /* Persistence.swift in Sources */,
-				AF3CA1CA2BF4A440005440A5 /* ContentView.swift in Sources */,
-				AF3CA1C82BF4A440005440A5 /* RemindersAppApp.swift in Sources */,
-				AF3CA1D42BF4A441005440A5 /* RemindersApp.xcdatamodeld in Sources */,
+				AF3CA1E72BF8EF31005440A5 /* ColorPickerView.swift in Sources */,
+				AF3CA1D12BF4A441005440A5 /* CoreDataProvider.swift in Sources */,
+				AF3CA1DC2BF8840B005440A5 /* RemindersModel.xcdatamodeld in Sources */,
+				AF3CA1ED2BFB9E8F005440A5 /* UIColorTransformer.swift in Sources */,
+				AF3CA1CA2BF4A440005440A5 /* HomeView.swift in Sources */,
+				AF3CA1E22BF8EBE8005440A5 /* MyList+CoreDataProperties.swift in Sources */,
+				AF3CA1E52BF8EE20005440A5 /* AddNewListView.swift in Sources */,
+				AF3CA1E02BF8EBD5005440A5 /* MyList+CoreDataClass.swift in Sources */,
+				AF3CA1C82BF4A440005440A5 /* RemindersApp.swift in Sources */,
+				AF3CA1EA2BFB9CDF005440A5 /* ReminderService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,13 +418,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		AF3CA1D22BF4A441005440A5 /* RemindersApp.xcdatamodeld */ = {
+		AF3CA1DA2BF8840B005440A5 /* RemindersModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				AF3CA1D32BF4A441005440A5 /* RemindersApp.xcdatamodel */,
+				AF3CA1DB2BF8840B005440A5 /* RemindersModel.xcdatamodel */,
 			);
-			currentVersion = AF3CA1D32BF4A441005440A5 /* RemindersApp.xcdatamodel */;
-			path = RemindersApp.xcdatamodeld;
+			currentVersion = AF3CA1DB2BF8840B005440A5 /* RemindersModel.xcdatamodel */;
+			name = RemindersModel.xcdatamodeld;
+			path = "/Users/santa/iOS Projects/RemindersApp/RemindersApp/RemindersModel.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
