@@ -11,13 +11,14 @@ import CoreData
 struct HomeView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
+    @FetchRequest(sortDescriptors: []) private var myListResults: FetchedResults<MyList>
+    
     @State private var isPresented: Bool = false
     
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Test an item")
-                Spacer()
+                MyListsView(myLists: myListResults)
                 Button(action: {
                     isPresented = true
                 }, label: {

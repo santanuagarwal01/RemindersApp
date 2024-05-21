@@ -14,6 +14,11 @@ struct RemindersApp: App {
         WindowGroup {
             HomeView()
                 .environment(\.managedObjectContext, CoreDataProvider.shared.persistentContainer.viewContext)
+                .onAppear(perform: {
+                    if let directoryLocation = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).last {
+                        print("Documents Directory: \(directoryLocation)Application Support")
+                    }
+                })
         }
     }
 }
