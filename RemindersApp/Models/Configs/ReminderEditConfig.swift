@@ -19,7 +19,7 @@ struct ReminderEditConfig {
     
     init() {}
     
-    init (reminder: Reminder) {
+    init(reminder: Reminder) {
         title = reminder.title ?? ""
         notes = reminder.notes
         isCompleted = reminder.isCompleted

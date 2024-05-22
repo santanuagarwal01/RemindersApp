@@ -32,8 +32,7 @@ struct SelectListView: View {
                 if selectedList == myList {
                     Image(systemName: "checkmark")
                 }
-            }
-            Text(myList.name)
+            } 
         }
     }
 }

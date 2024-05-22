@@ -43,13 +43,14 @@ struct MyListDetailView: View {
             TextField("", text: $title)
             Button("Cancel", role: .cancel) {}
             Button("Done") {
-                do {
-                    try ReminderService.saveReminderToMyList(myList: myList, reminderTitle: title)
-                } catch {
-                    print(error.localizedDescription)
+                if !title.isEmpty {
+                    do {
+                        try ReminderService.saveReminderToMyList(myList: myList, reminderTitle: title)
+                    } catch {
+                        print(error.localizedDescription)
+                    }
                 }
             }
-            
         }
     }
 }

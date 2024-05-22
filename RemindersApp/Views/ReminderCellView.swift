@@ -9,26 +9,19 @@ import SwiftUI
 
 enum ReminderCellEvents {
     case onInfo
-    case onCheckedChange(Reminder)
+    case onCheckedChange(Reminder, Bool)
     case onSelect(Reminder)
 }
 
 struct ReminderCellView: View {
     
     let reminder : Reminder
-    @State private var checked: Bool = false
-    
+    let isSelected: Bool
     let onEvent: (ReminderCellEvents) -> Void
     
-    private func formatDate(_ date: Date) -> String {
-        if date.isToday {
-            return "Today"
-        } else if date.isTomorrow {
-            return "Tomorrow"
-        } else {
-            return date.formatted(date: .numeric, time: .omitted)
-        }
-    }
+    let delay = Delay()
+
+    @State private var checked: Bool = false
     
     var body: some View {
         
@@ -38,14 +31,16 @@ struct ReminderCellView: View {
                 .font(.title2)
                 .onTapGesture {
                     checked.toggle()
-                    onEvent(.onCheckedChange(reminder))
+                    delay.cancel() // cancel old task
+                    delay.performWork { // call onCheckedChange inside delay
+                        onEvent(.onCheckedChange(reminder, checked))
+                    }
                 }
-            
             
             VStack(alignment: .leading) {
                 Text(reminder.title ?? "")
                 if let notes = reminder.notes, !notes.isEmpty {
-                    Text(notes) 
+                    Text(notes)
                         .opacity(0.4)
                         .font(.caption)
                 }
@@ -65,6 +60,7 @@ struct ReminderCellView: View {
             Spacer()
             
             Image(systemName: "info.circle.fill")
+                .opacity(isSelected ? 1.0 : 0.0)
                 .onTapGesture {
                     onEvent(.onInfo)
                 }
@@ -72,6 +68,19 @@ struct ReminderCellView: View {
         .contentShape(Rectangle())
         .onTapGesture {
             onEvent(.onSelect(reminder))
+        }
+        .onAppear(perform: {
+            checked = reminder.isCompleted
+        })
+    }
+    
+    private func formatDate(_ date: Date) -> String {
+        if date.isToday {
+            return "Today"
+        } else if date.isTomorrow {
+            return "Tomorrow"
+        } else {
+            return date.formatted(date: .numeric, time: .omitted)
         }
     }
 }

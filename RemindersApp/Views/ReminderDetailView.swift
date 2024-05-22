@@ -13,6 +13,10 @@ struct ReminderDetailView: View {
     @Binding var reminder: Reminder
     @State private var editConfig: ReminderEditConfig = ReminderEditConfig()
     
+    private var isFormValid: Bool {
+        !editConfig.title.isEmpty
+    }
+    
     var body: some View {
         
         NavigationView {
@@ -38,10 +42,20 @@ struct ReminderDetailView: View {
                                 .foregroundStyle(.red)
                         })
                         
-                        if editConfig.hasDate {
+                        if editConfig.hasTime {
                             DatePicker("Select Time", selection: $editConfig.reminderTime ?? Date(), displayedComponents: .hourAndMinute)
                         }
                     }
+                    .onChange(of: editConfig.hasDate, { oldValue, newValue in
+                        if newValue {
+                            editConfig.reminderDate = Date()
+                        }
+                    })
+                    .onChange(of: editConfig.hasTime, { oldValue, newValue in
+                        if newValue {
+                            editConfig.reminderTime = Date()
+                        }
+                    })
                     
                     Section {
                         NavigationLink {
@@ -67,7 +81,14 @@ struct ReminderDetailView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        
+                        if isFormValid {
+                            do {
+                                _ = try ReminderService.updateReminder(reminder: reminder, editConfig: editConfig)
+                            } catch {
+                                print(error.localizedDescription)
+                            }
+                            dismiss()
+                        }
                     } label: {
                         Text("Done")
                     }
