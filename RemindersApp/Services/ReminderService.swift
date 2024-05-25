@@ -51,6 +51,29 @@ class ReminderService {
         return true
     }
     
+    static func remindersByStatType(_ statType: ReminderStatType) -> NSFetchRequest<Reminder> {
+        let request = Reminder.fetchRequest()
+        request.sortDescriptors = []
+        
+        switch statType {
+            case .all:
+                request.predicate = NSPredicate(format: "isCompleted = false")
+                
+            case .today:
+                let today = Date()
+                let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today)!
+                request.predicate = NSPredicate(format: "(reminderDate >= %@) AND (reminderDate < %@)", today as NSDate, tomorrow as NSDate)
+                
+            case .scheduled:
+                request.predicate = NSPredicate(format: "((reminderDate != nil) OR (reminderTime != nil)) AND (isCompleted = false)")
+                
+            case .completed:
+                request.predicate = NSPredicate(format: "isCompleted = true")
+        }
+        
+        return request
+    }
+    
     static func deleteReminder(_ reminder: Reminder) throws {
         viewContext.delete(reminder)
         try save()

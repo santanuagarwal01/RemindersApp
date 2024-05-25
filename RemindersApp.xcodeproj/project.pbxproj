@@ -31,6 +31,9 @@
 		AF3CA2042BFD1E07005440A5 /* SelectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA2032BFD1E07005440A5 /* SelectListView.swift */; };
 		AF3CA2062BFD2C4A005440A5 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA2052BFD2C4A005440A5 /* Delay.swift */; };
 		AF3CA2082BFE7A14005440A5 /* ReminderStatsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA2072BFE7A14005440A5 /* ReminderStatsBuilder.swift */; };
+		AF3CA20A2C0104CB005440A5 /* ReminderStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA2092C0104CB005440A5 /* ReminderStatsView.swift */; };
+		AF3CA20D2C01CBB0005440A5 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA20C2C01CBB0005440A5 /* NotificationManager.swift */; };
+		AF3CA20F2C01D2D0005440A5 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CA20E2C01D2D0005440A5 /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +62,9 @@
 		AF3CA2032BFD1E07005440A5 /* SelectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectListView.swift; sourceTree = "<group>"; };
 		AF3CA2052BFD2C4A005440A5 /* Delay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
 		AF3CA2072BFE7A14005440A5 /* ReminderStatsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStatsBuilder.swift; sourceTree = "<group>"; };
+		AF3CA2092C0104CB005440A5 /* ReminderStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStatsView.swift; sourceTree = "<group>"; };
+		AF3CA20C2C01CBB0005440A5 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		AF3CA20E2C01D2D0005440A5 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				AF3CA1C72BF4A440005440A5 /* RemindersApp.swift */,
+				AF3CA20B2C01CB9C005440A5 /* Managers */,
 				AF3CA2002BFD1A9A005440A5 /* Utils */,
 				AF3CA1F82BFC811F005440A5 /* Extensions */,
 				AF3CA1EB2BFB9E7F005440A5 /* Transformers */,
@@ -146,6 +153,7 @@
 				AF3CA1F62BFC7F21005440A5 /* ReminderCellView.swift */,
 				AF3CA1FB2BFD183F005440A5 /* ReminderDetailView.swift */,
 				AF3CA2032BFD1E07005440A5 /* SelectListView.swift */,
+				AF3CA2092C0104CB005440A5 /* ReminderStatsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				AF3CA1F92BFC812B005440A5 /* Date+Extension.swift */,
+				AF3CA20E2C01D2D0005440A5 /* Color+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -189,6 +198,14 @@
 				AF3CA2052BFD2C4A005440A5 /* Delay.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		AF3CA20B2C01CB9C005440A5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AF3CA20C2C01CBB0005440A5 /* NotificationManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,11 +279,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF3CA1F12BFBCBCB005440A5 /* MyListCellView.swift in Sources */,
+				AF3CA20F2C01D2D0005440A5 /* Color+Extension.swift in Sources */,
 				AF3CA1E72BF8EF31005440A5 /* ColorPickerView.swift in Sources */,
 				AF3CA1F52BFBD9A8005440A5 /* ReminderListView.swift in Sources */,
 				AF3CA2082BFE7A14005440A5 /* ReminderStatsBuilder.swift in Sources */,
 				AF3CA1FF2BFD18BC005440A5 /* ReminderEditConfig.swift in Sources */,
 				AF3CA1F32BFBD059005440A5 /* MyListDetailView.swift in Sources */,
+				AF3CA20D2C01CBB0005440A5 /* NotificationManager.swift in Sources */,
 				AF3CA2022BFD1AAB005440A5 /* CustomOperators.swift in Sources */,
 				AF3CA1F72BFC7F21005440A5 /* ReminderCellView.swift in Sources */,
 				AF3CA1FA2BFC812B005440A5 /* Date+Extension.swift in Sources */,
@@ -279,6 +298,7 @@
 				AF3CA1E52BF8EE20005440A5 /* AddNewListView.swift in Sources */,
 				AF3CA1E02BF8EBD5005440A5 /* MyList+CoreDataClass.swift in Sources */,
 				AF3CA1C82BF4A440005440A5 /* RemindersApp.swift in Sources */,
+				AF3CA20A2C0104CB005440A5 /* ReminderStatsView.swift in Sources */,
 				AF3CA1FC2BFD183F005440A5 /* ReminderDetailView.swift in Sources */,
 				AF3CA2062BFD2C4A005440A5 /* Delay.swift in Sources */,
 				AF3CA2042BFD1E07005440A5 /* SelectListView.swift in Sources */,
